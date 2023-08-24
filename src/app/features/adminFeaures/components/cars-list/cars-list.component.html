@@ -1,0 +1,60 @@
+<div class="center-table mt-8 h-screen">
+    <p class="text-center font-semibold text-3xl text-blue-600">CARS - LIST</p>
+    <button routerLink="/admin/add" class="btn p-1 bg-green-500 text-white ml-7 rounded-md">Add Car</button>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
+      <!-- <app-search (searchChanged)="onSearchChanged($event)"></app-search> -->
+    <table class="w-full text-sm text-left">
+        <thead class="text-xs">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                   Model
+                </th>
+                <th scope="col" class="px-6 py-3">
+                   Color
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Year
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Price
+                  </th>
+                
+                <th scope="col" class="px-6 py-3">
+                    Action
+                  </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let car of carDetails" class="bg-white border-b hover:bg-gray-50">
+                <td class="px-6 py-4">
+                    <div class="flex items-center">
+                        <img class="h-10 w-10 rounded-full mr-2" src="{{car.image}}" alt="">
+                        <span class="">{{car.make_id}}</span>
+                    </div>
+                </td>
+                <td class="px-6 py-4">
+                 {{car.model}}
+                </td>
+                <td class="px-6 py-4">
+                 {{car.color}}
+                </td>
+                <td class="px-6 py-4">
+                    {{car.year}}
+                   </td>
+                   <td class="px-6 py-4">
+                    {{car.price}}
+                   </td>
+                
+
+                <td class="px-6 py-4">
+                  <button type="button" class="bg-blue-600 p-2 rounded-md text-white">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+</div>
